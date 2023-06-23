@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+  --font: 'Libre Franklin', sans-serif;
+  --f-size: 16px;
+  --primary: hsl(223, 87%, 63%);
+  --secondary: hsl(223, 100%, 88%);
+  --tertiary: hsl(354, 100%, 66%);
+  --white: hsl(0, 0%, 100%);
+  --light:  hsl(0, 0%, 59%);
+  --dark: hsl(209, 33%, 12%);
+  --black: hsl(0, 0%, 8%);
+  font-size: var(--f-size);
+}
+* {
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  width: 100%;
+  min-height: 100vh;
+}
+html {
+  background-color: var(--primary);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background: var(--white);
+  font-family: var(--font);
+  overflow-y: auto;
+  padding: 72px 32px 0px;
+}
+h1 {
+  font-size: 1.6rem;
+  color: var(--light);
+  font-weight: 300;
+  letter-spacing: 0.25px;
+}
+h1 span {
+  color: var(--dark);
+  font-weight: 700;
+}
+p {
+  font-size: 1rem;
+  color: var(--dark);
+  font-weight: 300;
+}
+.attribution {
+  width: 100%;
+  font-family: var(--font);
+  color: var(--black);
+  text-align: center;
+  font-size: 1rem;
+  margin: 10px 0;
+  z-index: 1;
+}
+.attribution p {
+  text-align: center;
+  margin: 0;
+}
+.attribution a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--secondary);
+}
+main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 40px;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 26px;
+  margin-bottom: 120px;
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0 40px 0;
+}
+form .email-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+form input {
+  outline: none;
+  width: 100%;
+  height: 48px;
+  border-radius: 24px;
+  border: 1px solid var(--secondary);
+  color: var(--dark);
+  padding: 0 20px;
+  letter-spacing: 0.25px;
+}
+form input::placeholder {
+  color: var(--secondary);
+}
+#error-message {
+  color: var(--tertiary);
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  display: none;
+}
+form.error input {
+  border: 1px solid var(--tertiary);
+}
+form.error #error-message {
+  display: block;
+}
+
+form button {
+  cursor: pointer;
+  width: 100%;
+  height: 48px;
+  border-radius: 24px;
+  border: none;
+  background-color: var(--primary);
+  color: var(--white);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.25px;
+  box-shadow:  0px 8px 10px 0px hsla(223, 87%, 63%, 0.2);
+}
+form button:hover {
+  opacity: 0.8;
+}
+section img {
+  width: 100%;
+}
+
+main footer .share-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+main footer .share-container .btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid var(--secondary);
+}
+main footer .share-container .btn:hover {
+  background: var(--primary);
+}
+main footer .share-container .btn .icon {
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+main footer .share-container .btn:hover .icon {
+  color: var(--white);
+}
+main footer .legal {
+  color: var(--light);
+}
+
+@media screen and (width > 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  main {
+    width: 700px;
+  }
+  header {
+    margin-bottom: 40px;
+  }
+  section {
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  form {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  form button {
+    width: 300px;
+  }
+  form input {
+    flex: 1 0 auto;
+  }
+  main footer .share-container {
+    margin-bottom: 20px;
+  }
+  .attribution {
+    position: absolute;
+    bottom: 5;
+  }
+}
