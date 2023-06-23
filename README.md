@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [link](link)
-- Live Site URL: [link](link)
+- Solution URL: [link](https://www.frontendmentor.io/solutions/ping-coming-soon-page-using-htmlcssjs-f76EzfUyQy)
+- Live Site URL: [link](https://ping-coming-soon-page-three-rouge.vercel.app/)
 
 
 ## My process
